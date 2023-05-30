@@ -291,12 +291,13 @@ def getPostById(id):
 def updateAvatar(id, user_avatar):
     Users.query.filter_by(id=id).update(dict(avatar=user_avatar))
     db.session.commit()
-
+    
 def create_admin_user():
     import getpass
     print ("Add user account: ")
-    user_name = input("Please enter the username: ")
-    user_email = input("Please enter the email: ")
-    user_pass = getpass.getpass("Please enter the password: ")
+    user_name = "respina"
+    user_email = "respina@gmail.com"
+    user_pass = "respina123"
     user_permissions = "*"
     registerUser(user_name, user_pass, user_email, user_permissions)
+
